@@ -1,13 +1,11 @@
-import { PrismaClient } from '@prisma/client';
-
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-
-async function main() {
+async function create() {
   const result = await prisma.courses.create({
     data: {
       duration: 200,
-      name: "Curso de node",
+      name: "Curso de python",
       description: "Curso muito bom"
     }
   })
@@ -15,4 +13,4 @@ async function main() {
   console.log(result)
 }
 
-main()
+create()
