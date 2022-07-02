@@ -31,7 +31,7 @@ model Modules {
   id          String   @id @default(uuid())
   name        String   @unique
   description String
-  create_at   DateTime @default(now())
+  created_at   DateTime @default(now())
 
   @@map("modules")
 }
